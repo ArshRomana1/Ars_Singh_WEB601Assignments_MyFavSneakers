@@ -14,30 +14,30 @@ export class ContentCardComponent {
 
     this.contentList.addContent({
           id: 1,
-          title: 'Angrej',
-          description: 'This is my favorite punjabi movie. Angrej ( Amrinder Gill ), an older adult from India, arrives at his pre-partition home in Pakistan, where he meets the current residents.',
-          creator: 'Jaspal Sandhu',
-          imgURL: 'assets/img/img1.jpg',
-          tags: ['Comedy']
+          title: 'Jordan 4',
+          description: 'This is all time classic sneaker, my favorite Jordan 4',
+          creator: 'Michael Jordan',
+          imgURL: 'assets/img/breddd.jpeg',
+          tags: ['Basketball']
     });
 
 
     this.contentList.addContent({
       id: 2,
-      title: 'Love Punjab',
-      description: 'The story of Love Punjab revolves around a family in which husband and wife fights daily for small reasons and their son is only victim of these fights.',
-      creator: 'Sandeep Singh',
-      imgURL: 'assets/img/lovepunjab.jpg',
-      tags: ['Comedy', 'Drama']
+      title: 'Jordan 1',
+      description: 'This Right here is my favoritw shoes of all time,It was a twist on a original Jordan 1 Colorway by an american designer.',
+      creator: 'Virgil Abloh',
+      imgURL: 'assets/img/reim.jpeg',
+      tags: ['StreetWear']
     });
 
     this.contentList.addContent({
       id: 3,
-      title: 'Chal Mera Putt',
-      description: 'Chal Mera Putt is a light-hearted comedy about a group of illegal immigrants living in the city of Birmingham.',
-      creator: 'Gurcharan Singh',
-      imgURL: 'assets/img/CMP.jpg',
-     tags: ['Comedy', 'Drama']
+      title: 'Jordan 1',
+      description: 'This is the first jordan shoes ever made , so clearly is my most desireable pair of shoes.',
+      creator: 'Michael Jordan',
+      imgURL: 'assets/img/uncc.jpeg',
+     tags: ['Basketball']
     });
   }
 }
