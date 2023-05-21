@@ -63,4 +63,17 @@ tags: ['Basketball , Streetwear , Shoes']
 }
 
  ]
+ getContentHtml(index: number): string {
+  const content = this.contentList[index];
+  const imgHtml = content.imgURL ? `<img src="${content.imgURL}" alt="${content.title}" style = "height:500px;" />` : '';
+  return `
+    <div >
+      <h2>${content.title}</h2>
+      <p>${content.description}</p>
+      <p>Creator: ${content.creator}</p>
+      ${imgHtml}
+      <p>Type: ${content.type || '-'}</p>
+    </div>
+  `;
+}
 }
