@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Content } from '../helper-files/content-interface';
 
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
-export class ContentListComponent {
- contentList = [
+
+export class ContentListComponent implements OnInit{
+ngOnInit(){}
+
+ contentList:Content[] = [
   {
     id: 1,
     title: 'Jordan 4',
@@ -60,20 +64,8 @@ creator: 'Michael Jordan',
 imgURL: 'assets/img/uncc.jpeg',
 type: 'Sneakers',
 tags: ['Basketball , Streetwear , Shoes']
-}
+},
+  
+]
+  }
 
- ]
- getContentHtml(index: number): string {
-  const content = this.contentList[index];
-  const imgHtml = content.imgURL ? `<img src="${content.imgURL}" alt="${content.title}" style = "height:500px;" />` : '';
-  return `
-    <div >
-      <h2>${content.title}</h2>
-      <p>${content.description}</p>
-      <p>Creator: ${content.creator}</p>
-      ${imgHtml}
-      <p>Type: ${content.type || '-'}</p>
-    </div>
-  `;
-}
-}

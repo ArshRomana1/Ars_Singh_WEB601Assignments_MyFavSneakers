@@ -1,6 +1,9 @@
 <p>content-list works!</p>
-<h1 style="background-color: rgba(158, 203, 100, 0.755);">My Favourite Sneakers</h1>
-<div class ="content-list" *ngFor="let content of contentList.slice(0, 5)">
+<h1 style="background-color: rgba(100, 182, 203, 0.755);">My Favourite Sneakers</h1>
+<!-- <div class ="content-list" *ngFor="let content of contentList.slice(0, 5)">
     <div [innerHTML]="getContentHtml(content.id -1)"></div>
-  </div>
-  <hr>
+  </div> -->
+  <app-content-card *ngFor="let item of contentList.slice(0,5); 
+  let first = first" [content]="item" [class.first-item]="first" > 
+</app-content-card>
+
