@@ -65,6 +65,15 @@ imgURL: 'assets/img/uncc.jpeg',
 type: 'Sneakers',
 tags: ['Basketball , Streetwear , Shoes']
 },
+{
+  id: 7,
+  title: 'Jordan 3',
+  description: 'This Right here is my favoritw shoes of all time,It was a twist on a original Jordan 1 Colorway by an american designer.',
+  creator: 'Virgil Abloh',
+  imgURL: 'assets/img/reim.jpeg',
+  type: 'Sneakers',
+  tags: ['Basketball , Streetwear , Shoes']
+}
   
 ]
   }
