@@ -1,4 +1,5 @@
-<div class="contents">
+<div class="content" *ngIf ="content.type ==='Cup' || content.type === 'League' || content.type ===''"  [ngStyle]="{'margin': '30px '  }">
+ 
   
   <h2>{{content.title}}</h2>
   <p>{{content.description}}</p>

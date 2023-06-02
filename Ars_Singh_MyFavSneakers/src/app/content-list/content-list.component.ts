@@ -44,7 +44,7 @@ ngOnInit(){}
   description: 'This is all time classic sneaker, my favorite Jordan 4',
   creator: 'Michael Jordan',
   imgURL: 'assets/img/breddd.jpeg',
-  type: 'Sneakers',
+  type: 'Shoes',
   tags: ['Basketball , Streetwear , Shoes']
 },
 {
@@ -53,7 +53,7 @@ title: 'Jordan 1',
 description: 'This Right here is my favoritw shoes of all time,It was a twist on a original Jordan 1 Colorway by an american designer.',
 creator: 'Virgil Abloh',
 imgURL: 'assets/img/reim.jpeg',
-type: 'Sneakers',
+type: 'Shoes',
 tags: ['Basketball , Streetwear , Shoes']
 },
 {
@@ -62,7 +62,7 @@ title: 'Jordan 1',
 description: 'This is the first jordan shoes ever made , so clearly is my most desireable pair of shoes.',
 creator: 'Michael Jordan',
 imgURL: 'assets/img/uncc.jpeg',
-type: 'Sneakers',
+type: '',
 tags: ['Basketball , Streetwear , Shoes']
 },
 {
@@ -71,7 +71,7 @@ tags: ['Basketball , Streetwear , Shoes']
   description: 'This Right here is my favoritw shoes of all time,It was a twist on a original Jordan 1 Colorway by an american designer.',
   creator: 'Virgil Abloh',
   imgURL: 'assets/img/reim.jpeg',
-  type: 'Sneakers',
+  type: '',
   tags: ['Basketball , Streetwear , Shoes']
 }
   
