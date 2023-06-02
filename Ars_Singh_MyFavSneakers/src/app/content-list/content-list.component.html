@@ -13,18 +13,18 @@
   </div>
   <div id="none">
   <h1>No Type</h1>
-  <app-content-card class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title === findTitle && filterResult}" >
+  <app-content-card class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
   </app-content-card>
   </div>
   
   <div id ="Sneakers" >
   <h1>Sneakers Type</h1>
-  <app-content-card  *ngFor="let item of (contentList | contentFilter :'Cup' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
+  <app-content-card  *ngFor="let item of (contentList | contentFilter :'Sneakers' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
   </app-content-card>
   </div>
   
   <div id ="Shoes">
   <h1>Shoes Type</h1>
-  <app-content-card  *ngFor="let item of (contentList | contentFilter :'League' )" [content]="item" [ngClass]="{'highlight': item.title === findTitle && filterResult}">
+  <app-content-card  *ngFor="let item of (contentList | contentFilter :'Shoes' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}">
   </app-content-card>
   </div>
