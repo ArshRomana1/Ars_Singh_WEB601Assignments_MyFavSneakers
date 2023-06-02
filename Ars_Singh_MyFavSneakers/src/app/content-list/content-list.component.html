@@ -6,4 +6,25 @@
   <!-- <app-content-card *ngFor="let item of contentList.slice(0,5); 
   let first = first" [content]="item" [class.first-item]="first" > 
 </app-content-card> -->
-
+<div id="filter">
+  <input [(ngModel)]="findTitle"><button (click)="findContent()">Search</button>
+  <br>
+  <h1>{{message}}</h1>
+  </div>
+  <div id="none">
+  <h1>No Type</h1>
+  <app-content-card class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title === findTitle && filterResult}" >
+  </app-content-card>
+  </div>
+  
+  <div id ="Sneakers" >
+  <h1>Sneakers Type</h1>
+  <app-content-card  *ngFor="let item of (contentList | contentFilter :'Cup' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
+  </app-content-card>
+  </div>
+  
+  <div id ="Shoes">
+  <h1>Shoes Type</h1>
+  <app-content-card  *ngFor="let item of (contentList | contentFilter :'League' )" [content]="item" [ngClass]="{'highlight': item.title === findTitle && filterResult}">
+  </app-content-card>
+  </div>
