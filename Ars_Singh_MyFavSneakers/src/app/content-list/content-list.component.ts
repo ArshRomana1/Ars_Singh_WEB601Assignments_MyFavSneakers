@@ -76,5 +76,22 @@ tags: ['Basketball , Streetwear , Shoes']
 }
   
 ]
+findTitle : string ='';
+filterResult: boolean = false;
+message :string =''
+
+findContent() {
+  this.filterResult = this.contentList.some(content => content.title.toLowerCase() === this.findTitle.toLowerCase());
+
+  if (this.filterResult) {
+    this.message = 'title exists.';
+  } else {
+    this.message = ' title does not exist.';
   }
+}
+// ngOnInit(){
+  
+// }
+
+}
 
