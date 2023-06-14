@@ -5,11 +5,12 @@
   <p>{{content.description}}</p>
   <p>Creator: {{content.creator}}</p>
   <img  *ngIf="content.imgURL; else defaultImage" (click)="clickEvent()" src='{{content.imgURL}}'>
+ 
+
+  <p *ngIf="content.type" appHoverAffect [affectStyle]="'underline'"> Type:{{content.type}}</p>
+  <p *ngIf="content.tags && content.tags.length > 0"appHoverAffect [affectStyle]="'bold'">Tag: {{content.tags}}</p>
+
   <ng-template #defaultImage>
     <img src="assets/img/defaultImg.jpeg">
   </ng-template>
-
-  <p *ngIf="content.type" > {{content.type}}</p>
-  <p *ngIf="content.tags && content.tags.length > 0"> {{content.tags}}</p>
-
 </div>
