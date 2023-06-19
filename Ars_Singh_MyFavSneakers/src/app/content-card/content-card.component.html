@@ -1,4 +1,4 @@
-<div class="content" *ngIf ="content.type ==='Sneakers' || content.type === 'Shoes' || content.type ===''"  [ngStyle]="{'margin': '30px '  }">
+<div appHoverAffect [affectStyle]="'border'"class="content" *ngIf ="content.type ==='Sneakers' || content.type === 'Shoes' || content.type ===''"  [ngStyle]="{'margin': '30px '  }">
  
   
   <h2>{{content.title}}</h2>
@@ -7,7 +7,7 @@
   <img  *ngIf="content.imgURL; else defaultImage" (click)="clickEvent()" src='{{content.imgURL}}'>
  
 
-  <p *ngIf="content.type" appHoverAffect [affectStyle]="'underline'"> Type:{{content.type}}</p>
+  <p *ngIf="content.type" appHoverAffect [affectStyle]="'color'"> Type:{{content.type}}</p>
   <p *ngIf="content.tags && content.tags.length > 0"appHoverAffect [affectStyle]="'bold'">Tag: {{content.tags}}</p>
 
   <ng-template #defaultImage>
