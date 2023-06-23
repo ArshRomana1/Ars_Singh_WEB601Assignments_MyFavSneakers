@@ -1,1 +1,10 @@
-<p>create-content works!</p>
+<div>
+    <input type="text" [(ngModel)]="id" placeholder="Content ID">
+    <input type="text" [(ngModel)]="title" placeholder="Title">
+    <input type="text" [(ngModel)]="description" placeholder="Description">
+    <input type="text" [(ngModel)]="creator" placeholder="Creator">
+    <input type="text" [(ngModel)]="type" placeholder="Type">
+
+    <button (click)="addContent()">Add Content</button>
+
+    </div>
