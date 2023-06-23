@@ -89,9 +89,11 @@ findContent() {
     this.message = ' title does not exist.';
   }
 }
-// ngOnInit(){
-  
-// }
+receiveNewContent(newContent: any): void {
+  console.log("newContent", newContent);
+  this.contentList = [...this.contentList, newContent];
+  console.log('contentList', this.contentList);
+}
 
 }
 
