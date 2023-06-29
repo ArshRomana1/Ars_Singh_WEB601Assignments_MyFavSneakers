@@ -1,0 +1,13 @@
+<div>
+    <input type="text" [(ngModel)]="id" placeholder="Content ID"><br>
+    <input type="text" [(ngModel)]="title" placeholder="Title"><br>
+    <input type="text" [(ngModel)]="description" placeholder="Description"><br>
+    <input type="text" [(ngModel)]="creator" placeholder="Creator"><br>
+    <input type="text" [(ngModel)]="type" placeholder="Type"><br>
+
+    <button (click)="addContent()">Add Content</button>
+    <p class="error" *ngIf="requiredFieldMessage">{{ requiredFieldMessage }}</p>
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+
+</div>
