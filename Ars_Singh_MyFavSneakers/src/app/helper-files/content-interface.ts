@@ -1,4 +1,5 @@
 interface Content {
+    [x: string]: any;
     id: number;
     title: string;
     description: string;
