@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
+import { SneakerServiceService } from '../sneaker-service.service';
 
 
 @Component({
@@ -9,9 +10,13 @@ import { Content } from '../helper-files/content-interface';
 })
 
 export class ContentListComponent implements OnInit{
-ngOnInit(){}
+
 
  contentList: any[];
+ constructor(private sneakerService: SneakerServiceService){
+
+ }
+
 findTitle : string ='';
 filterResult: boolean = false;
 message :string =''
@@ -30,6 +35,11 @@ receiveNewContent(newContent: any): void {
   this.contentList = [...this.contentList, newContent];
   console.log('contentList', this.contentList);
 }
-
+ngOnInit(){
+  this.sneakerService.getContent().subscribe((contentList: any[])=>
+  {
+    this.contentList = contentList;
+  })
+}
 }
 
