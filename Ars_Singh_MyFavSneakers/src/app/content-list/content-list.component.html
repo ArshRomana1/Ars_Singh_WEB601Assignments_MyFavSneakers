@@ -1,0 +1,35 @@
+<!-- <app-create-content (contentAdded)="receiveNewContent($event)"></app-create-content> -->
+<h1 style="background-color: rgba(100, 182, 203, 0.755);">My Favourite Sneakers</h1>
+<!-- <div class ="content-list" *ngFor="let content of contentList.slice(0, 5)">
+    <div [innerHTML]="getContentHtml(content.id -1)"></div>
+  </div> -->
+  <!-- <app-content-card *ngFor="let item of contentList.slice(0,5); 
+  let first = first" [content]="item" [class.first-item]="first" > 
+</app-content-card> -->
+<div id="filter">
+  <input [(ngModel)]="findTitle"><button (click)="findContent()">Search</button>
+  <br>
+  <h1>{{message}}</h1>
+  </div>
+
+  <div id="Arsh">
+  <div id="none">
+  <h1>No Type</h1>
+  <app-content-card class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
+  </app-content-card>
+  </div>
+  </div>
+  <div id="Arsh1">
+  <div id ="Sneakers" >
+  <h1>Sneakers Type</h1>
+  <app-content-card  *ngFor="let item of (contentList | contentFilter :'Sneakers' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
+  </app-content-card>
+  </div>
+  </div>
+  <div id="Arsh2">
+  <div id ="Shoes">
+  <h1>Shoes Type</h1>
+  <app-content-card  *ngFor="let item of (contentList | contentFilter :'Shoes' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}">
+  </app-content-card>
+  </div>
+</div>
