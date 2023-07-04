@@ -40,6 +40,12 @@ ngOnInit(){
   {
     this.contentList = contentList;
   })
+
+  const id = 4;
+  this.sneakerService.getContentById().subscribe((singleContent: any)=>
+  {
+    
+  })
 }
 }
 

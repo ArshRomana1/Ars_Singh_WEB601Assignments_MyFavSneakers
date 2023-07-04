@@ -11,4 +11,8 @@ export class SneakerServiceService {
   getContent() : Observable<any[]>{
     return of(contentList);
   }
+  getContentById(id : number) : Observable<any>{
+    const singleContent = contentList.find((item)=> item.id === id);
+    return of(singleContent);
+  }
 }
