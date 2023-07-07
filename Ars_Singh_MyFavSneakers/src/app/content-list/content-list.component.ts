@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
-import { SneakerServiceService } from '../sneaker-service.service';
+import { SneakerServiceService} from '../sneaker-service.service';
+import { MessageService} from '../message.service';
 
 
 @Component({
@@ -13,7 +14,9 @@ export class ContentListComponent implements OnInit{
 
 
  contentList: any[];
- constructor(private sneakerService: SneakerServiceService){
+ item:any;
+ constructor(private sneakerService: SneakerServiceService , 
+  public messageService : MessageService){
 
  }
 
@@ -42,9 +45,9 @@ ngOnInit(){
   })
 
   const id = 4;
-  this.sneakerService.getContentById().subscribe((singleContent: any)=>
+  this.sneakerService.getContentById(id).subscribe((singleContent: any)=>
   {
-    
+    this.item = singleContent;
   })
 }
 }
