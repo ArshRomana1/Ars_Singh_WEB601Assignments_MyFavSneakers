@@ -1,0 +1,33 @@
+<div class="content">
+    <form>
+      <div>
+          <label>Title: </label>
+          <input type="text" [(ngModel)]="title" />
+        </div>
+        <div>
+          <label>Description: </label>
+          <input type="text" [(ngModel)]="description">
+        </div>
+        <div>
+          <label>Creator: </label>
+          <input type="text" [(ngModel)]="creator" />
+        </div>
+        <div>
+        <label >Image: </label>
+        <input type="text" [(ngModel)]="imgURL">
+      </div>
+      
+        <div>
+          <label>Type: </label>
+          <input type="text" [(ngModel)]="type" />
+        </div>
+        <div>
+          <label>Tags: </label>
+          <input type="text" [(ngModel)]="tags" />
+        </div>
+        <div>
+      
+        <button (click)="submitContent()">Add New content</button>
+        </div>
+        </form>
+      </div>
