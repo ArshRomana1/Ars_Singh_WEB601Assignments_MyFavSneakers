@@ -12,6 +12,7 @@ export class ContentCardComponent implements OnInit{
       console.log(this.content.id, this.content.title)
   }
  @Input() content : Content;
+//  @Input() item : Content;
  ngOnInit(){ 
  
  }
