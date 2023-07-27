@@ -1,6 +1,6 @@
 <div class="content" *ngIf ="content.type ==='Sneakers' || content.type === 'Shoes' || content.type ===''"  [ngStyle]="{'margin': '30px '  }">
  
-  
+  <h2>{{content?.id}}</h2>
   <h2>{{content.title}}</h2>
   <p>{{content.description}}</p>
   <p>Creator: {{content.creator}}</p>
