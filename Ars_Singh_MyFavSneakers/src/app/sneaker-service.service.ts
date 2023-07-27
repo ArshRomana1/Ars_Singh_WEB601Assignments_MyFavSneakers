@@ -23,4 +23,9 @@ export class SneakerServiceService {
     this.messageService.add('Content Item At Id' + id)
     return of(singleContent);
   }
+
+  addContent(newContentItem: Content):
+Observable<Content>{
+return this.http.post<Content>("api/content",newContentItem, this.httpOptions);
+}
 }

@@ -38,6 +38,7 @@ receiveNewContent(newContent: any): void {
   this.contentList = [...this.contentList, newContent];
   console.log('contentList', this.contentList);
 }
+
 ngOnInit(){
   this.sneakerService.getContent().subscribe((contentList: any[])=>
   {
@@ -50,5 +51,14 @@ ngOnInit(){
     this.item = singleContent;
   })
 }
+
+addContentToList(newContentItem: any){
+  this.sneakerService.addContent(newContentItem).subscribe((newContentFromServer) => {
+    this.contentList = [...this.contentList, newContentFromServer];
+    console.log(this.contentList);
+  }
+  );
+  }
+
 }
 

@@ -10,7 +10,7 @@
   <input [(ngModel)]="findTitle"><button (click)="findContent()">Search</button>
   <br>
   <h1>CONTENT LIST COMPONENT</h1>
-<app-modify-content-component (addNewContentEvent)="addContentToList($event)"></app-modify-content-component>
+<app-modify-content (addNewContentEvent)="addContentToList($event)"></app-modify-content>
   <h1>{{message}}</h1>
   </div>
   <app-content-card [content]="item"></app-content-card>
