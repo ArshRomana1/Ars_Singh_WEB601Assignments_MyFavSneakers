@@ -19,13 +19,15 @@
     <h2>Messages</h2>
     <button type="button" class="clear"
             (click)="messageService.clear()">Clear messages</button>
-           
     <div *ngFor='let message of messageService.messages'> {{message}} </div>
   
   </div>
   <div id="Arsh">
   <div id="none">
   <h1>No Type</h1>
+  <div *ngIf="contentList.length == 0">
+    <mat-spinner></mat-spinner>
+  </div>
   <app-content-card class="none" *ngFor="let item of (contentList | contentFilter :'' )" [content]="item"  [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
   </app-content-card>
   </div>
@@ -33,6 +35,9 @@
   <div id="Arsh1">
   <div id ="Sneakers" >
   <h1>Sneakers Type</h1>
+  <div *ngIf="contentList.length == 0">
+    <mat-spinner></mat-spinner>
+  </div>
   <app-content-card  *ngFor="let item of (contentList | contentFilter :'Sneakers' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}" >
   </app-content-card>
   </div>
@@ -40,6 +45,9 @@
   <div id="Arsh2">
   <div id ="Shoes">
   <h1>Shoes Type</h1>
+  <div *ngIf="contentList.length == 0">
+    <mat-spinner></mat-spinner>
+  </div>
   <app-content-card  *ngFor="let item of (contentList | contentFilter :'Shoes' )" [content]="item" [ngClass]="{'highlight': item.title.toLowerCase() === findTitle.toLowerCase() && filterResult}">
   </app-content-card>
   </div>
